@@ -31,6 +31,10 @@ h3#heading-title {
     color: red;
 }
 
+.text-red {
+    color: red;
+}
+
 aside, footer { 
     font-style: italic; 
 }
