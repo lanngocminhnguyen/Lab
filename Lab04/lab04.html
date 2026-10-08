@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="UTF=8">
+        <meta name="description" content="HTML 5 Structure and Content Elements with some CSS">
+        <meta name="keywords" content="Elements, CSS">
+        <meta name="author" content="lanngocminhnguyen">
+        <title>Lab04 Exercise</title>
+
+        <link rel="stylesheet" type="text/css" href="lab04.css">
+    </head>
+    <body>
+        <h1>HTML 5 Structure and Content Elements with some CSS</h1>
+        <nav>
+            <a href="#headings-paragraphs">Heading and Paragraphs</a>&nbsp;
+            <a href="#special-characters">Special Characters</a>&nbsp;
+            <a href="#lists">Lists</a>&nbsp;
+            <a href="#tables">Tables</a>&nbsp;
+            <a href="#images">Images</a>&nbsp;
+            <a href="#hyperlinks">Hyperlinks</a>&nbsp;
+        </nav>
+
+        <hr>
+
+        <h2>HTML5 Basic Elements</h2>
+        <p>HTML page without CCS styling looks a bit boring!!</p>
+
+        <h2 id="headings-paragraphs">Headings and Paragraphs</h2>
+        <p>Headings and paragraphs are BLOCK elements</p>
+
+        <h3 id="heading-title">Headings</h3>
+        <p>There are 6 levels of heading. Headings are logical marked. Do not skip levels. If you want to change the size of a heading, don't change its level - change the CSS.</p>
+
+        <h3>Paragraphs</h3>
+        <p>Paragraphs contain the body text of a web page. You cannot put another block element inside a paragraph.</p>
+
+        <h2 id="special-characters">Special Characters</h2>
+        <p>While HTML supports many named special characters like <span class="special">® (#174)</span>, XML only supports 5 namely: <span class="special">" ' & < and ></span>. So to keep your HTML compliant you need to use numbers for all the others.</p>
+        <h2 id="lists">Lists</h2>
+        <p>There are three types of lists: Unordered and Ordered lists, and Definition Lists</p>
+
+        <h3>Unordered List</h3>
+        <ul>
+            <li>First bullet point</li>
+            <li>Second bullet point</li>
+            <li>Third bullet point</li>
+        </ul>
+
+        <h3>Ordered List</h3>
+        <ol>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ol>
+
+        <h3>Definition List</h3>
+        <dl>
+            <dt>First term (or name)</dt>
+            <dd>First description (or definition, or value)</dd>
+            <dt>Second term (or name)</dt>
+            <dd>second description (or definition, or value)</dd>
+        </dl>
+        <p>Lists can also be nested inside each other</p>
+        <ol>
+            <li>First item</li>
+            <li>Second item
+                <ul>
+                    <li>First sub-item</li>
+                    <li>Second sub-item</li>
+                    <li>Third sub-item</li>
+                </ul>
+            </li>
+            <li>Third iteam</li>
+        </ol>
+
+        <h2 id="tables">Tables</h2>
+        <p>Table of Monthly Savings</p>
+        <table>
+            <thead>
+                <tr>
+                <th rowspan="2">Month</th>
+                <th colspan="3" style="text-align: center;">Savings</th> 
+                </tr>   
+                <tr>           
+                <th>Salary</th>
+                <th>Interest</th>
+                <th>Total</th>
+                </tr> 
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="text-right">Jan</th>
+                    <td>$60</td>
+                    <td>$40</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <th class="text-right">Feb</th>
+                    <td>$40</td>
+                    <td>$40</td>
+                    <td>$80</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td colspan="3" style="text-align: center;"><strong>Grand Total</strong></td>
+                <td>$180</td>
+            </tfoot>
+        </table>
+        
+        <h2 id="hyperlinks">Hyperlinks</h2>
+            <a href="https://swinburne.instructure.com/">This is a link to an external site Canvas</a>
+            <p>This is a link to the <a href="#lists">List Section</a> of this Web page</p>
+            <p>This is a link using <a href="mailto:106727143@swin.edu.au">email</a> rather than an http protocol</p>
+
+        <h2 id="images">Images</h2>
+        <p>This thumbnail image is used as a hyperlink to a larger version of the image</p>
+        <p>
+        <a href="mycat_small.jpg">
+            <img src="mycat_small.jpg" alt="Photo of my cat">
+        </a><br>
+        <a href="mycat_small.jpg">Photo of my cat</a>
+    </p>
+    <hr>
+    <p>Lab04 - Task 3</p>
+    </body>
+</html>
