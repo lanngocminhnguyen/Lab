@@ -64,10 +64,6 @@ ol ul {
     list-style-type: square;
 }
 
-aside:hover {
-    display: none;
-}
-
 nav a:hover {
     background-color: lightblue;
     border-color: darkblue;

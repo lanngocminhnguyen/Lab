@@ -41,25 +41,34 @@ footer {
     clear: both;
 }
 
+.grid {
+    clear: both;
+    overflow: hidden;
+}
+
 #lists {
     float: left;
-    clear: left;
-    width: 48%;
+    width: 50%;
 }
 
 #tables {
     float: right;
-    clear: both;
+    width: 50%;
 }
 
 #hyperlinks {
-    clear: left;
     float: left;
+    clear: both;   
+    width: 50%;
 }
 
 #images {
     float: right;
-    clear: both;
+    width: 50%;
+}
+
+table {
+    margin: 0 auto;
 }
 
 figure {
@@ -68,7 +77,6 @@ figure {
 }
 
 #lists, #images, #tables, #hyperlinks {
-    width: 50%;
     text-align: center;
 }
 
@@ -107,8 +115,4 @@ footer p:last-child {
     text-align: right; 
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
+

@@ -2,8 +2,6 @@ dl {
     border: 3px double #ccc;
     padding: 0.5em; 
     overflow: hidden;
-    clear: both; 
-    margin-right: 60%;
 }
 
 dt {
@@ -20,6 +18,6 @@ dt::after {
 }
 
 dd {
-    margin-left: 0; 
+    margin-left: calc(40% + 0.5em); 
     margin-bottom: 0.5em;      
 }
