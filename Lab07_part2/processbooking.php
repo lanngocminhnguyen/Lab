@@ -59,12 +59,43 @@ if (isset($_POST["firstname"])) {
 
     $err_msg = "";
 
+   
     if (strlen($firstname) == 0) {
         $err_msg .= "<p>Error: Please enter your firstname.</p>";
+    } elseif (!preg_match("/^[a-zA-Z ]+$/", $firstname)) {
+        $err_msg .= "<p>Error: Firstname must contain only letters and spaces.</p>";
     }
 
     if (strlen($lastname) == 0) {
         $err_msg .= "<p>Error: Please enter your lastname.</p>";
+    } elseif (!preg_match("/^[a-zA-Z ]+$/", $lastname)) {
+        $err_msg .= "<p>Error: Lastname must contain only letters and spaces.</p>";
+    }
+
+    
+    if (!preg_match("/^[0-9]{1,3}$/", $age)) {
+        $err_msg .= "<p>Error: Age must contain 1 to 3 digits.</p>";
+    }
+
+    
+    if (!preg_match("/^[0-9]{1,2}$/", $partysize)) {
+        $err_msg .= "<p>Error: Number of travellers must contain 1 to 2 digits.</p>";
+    } elseif ((int)$partysize < 1) {
+        $err_msg .= "<p>Error: Number of travellers must be at least 1.</p>";
+    }
+
+    
+    if (!preg_match("/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/", $bookday)) {
+        $err_msg .= "<p>Error: Date must use the format dd/mm/yyyy.</p>";
+    } else {
+        $dateParts = explode("/", $bookday);
+        $day = (int)$dateParts[0];
+        $month = (int)$dateParts[1];
+        $year = (int)$dateParts[2];
+
+        if (!checkdate($month, $day, $year)) {
+            $err_msg .= "<p>Error: Please enter a valid date.</p>";
+        }
     }
 
     if ($err_msg == "") {
